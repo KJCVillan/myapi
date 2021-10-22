@@ -1,3 +1,4 @@
+const express = require('express');
 const { Router } = require('express')
 const rauterUsuarios = Router();
 const ctrUsuario = require('../controladores/usuarios.controlador');
@@ -11,12 +12,12 @@ rauterUsuarios.get('/doble/:num',(req, res)=>{
   res.json(doble);
 })
 
-rauterUsuarios.get('/usuarios', ctrUsuario.getUsuarios)
+rauterUsuarios.get('/', ctrUsuario.getUsuarios)
 
-rauterUsuarios.post('/usuarios',ctrUsuario.postUsuario)
+rauterUsuarios.post('/',ctrUsuario.postUsuario)
 
-rauterUsuarios.put('/usuarios/:id',ctrUsuario.putUsuario)
+rauterUsuarios.put('/:id',ctrUsuario.putUsuario)
 
-rauterUsuarios.delete('/usuarios/:id',ctrUsuario.deleteUsuario)
+rauterUsuarios.delete('/:id',ctrUsuario.deleteUsuario)
 
 module.exports = rauterUsuarios;

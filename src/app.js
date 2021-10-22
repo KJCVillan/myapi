@@ -1,7 +1,7 @@
 const express = require('express')
 const morgan = require('morgan')
 const conexionDB = require('./conexion/conexion')
-const rauterEstudiantes = require('./rutas/usuarios.rutas')
+const rauterUsuarios = require('./rutas/usuarios.rutas')
 const app = express()
 
 //llamamos la conexion
@@ -20,6 +20,6 @@ app.use(morgan("dev"));
 app.use(express.static('public'))
 
 // llamado de rutas
-app.use('/alma', rauterEstudiantes);
+app.use('/alma/usuarios', rauterUsuarios);
 
 module.exports = app;

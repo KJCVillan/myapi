@@ -1,7 +1,4 @@
 ###
-GET http://127.0.0.1:8005/alma
-
-###
 GET http://127.0.0.1:8005/alma/usuarios
 
 ###
@@ -9,8 +6,8 @@ POST http://127.0.0.1:8005/alma/usuarios
 Content-Type: application/json
 
 {
-  "nombre":"Julia paramo",
-  "correo": "julia@paramo.com"
+  "nombre":"luz conde",
+  "correo":"luz@conde.com"
 }
 
 ###

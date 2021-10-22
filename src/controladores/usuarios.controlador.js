@@ -24,11 +24,13 @@ exports.postUsuario = async (req, res) => {
         nombre,
         correo
       })
+      console.log(nuevoUsuario);
       await nuevoUsuario.save()
-      res.json({ isOk: true, msj: "usuario guardado", id: nuevoUsuario._id })
+      res.json({ isOk: true, msj: "usuario guardado", id: nuevoUsuario._id, nombre: nuevoUsuario.nombre })
     } else {
       res.json({ isOk: false, msj: "los datos son requeridos" })
     }
+    
   } catch (error) {
     res.json(error);
   }
